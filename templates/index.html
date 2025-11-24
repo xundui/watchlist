@@ -3,15 +3,21 @@
 <head>
     <meta charset="utf-8">
     <title>{{ name }}'s Watchlist</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/xun1.jpg') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
 </head>
 <body>
-    <h2>{{ name }}'s Watchlist</h2>
+    <h2>
+        <img alt="xun3" class="xun3" src="{{ url_for('static', filename='images/xun3.jpg') }}">
+        {{ name }}'s Watchlist
+    </h2>
     <p>{{ movies|length }} Titles</p>
-    <ul>
+    <ul  class="movie-list">
         {% for movie in movies %}
         <li>{{ movie.title }} - {{ movie.year }}</li>
         {% endfor %}
     </ul>
+    <img alt="xun4" class="xun4" src="{{ url_for('static', filename='images/xun4.jpg') }}">
     <footer>
         <small>&copy; 2025 <a href="https://helloflask.com/book/3">HelloFlask</a> </small>
     </footer>
