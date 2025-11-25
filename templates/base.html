@@ -13,6 +13,9 @@
 <h2>
     <img alt="xun3" class="xun3" src="{{ url_for('static', filename='images/xun3.jpg') }}">
     {{ user.name }}'s Watchlist
+    {% for message in get_flashed_messages() %}
+        <div class="alert">{{ message }}</div>
+    {% endfor %}
 </h2>
 <nav>
     <ul>
