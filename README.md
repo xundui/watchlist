@@ -23,7 +23,7 @@
 
 ### User 模型
 - [id](file:///home/xun/MyPyCharm/watchlist/app.py#L31-L31): 整数类型主键
-- [name](file:///home/xun/MyPyCharm/watchlist/app.py#L27-L27): 字符串类型，最大长度20字符
+- [name](file:///home/xun/MyPyCharm/watchlist/app.py#L28-L28): 字符串类型，最大长度20字符
 
 ### Movie 模型
 - [id](file:///home/xun/MyPyCharm/watchlist/app.py#L31-L31): 整数类型主键
@@ -37,6 +37,7 @@
 flask init-db [--drop]
 ```
 
+
 - `--drop` 选项：在创建新表之前删除现有表
 
 ### 生成测试数据
@@ -44,17 +45,21 @@ flask init-db [--drop]
 flask forge
 ```
 
+
 - 清空并重新创建数据库表
 - 插入默认用户"Xun"和10部预设电影数据
 
 ## 路由
 
 - `/` - 首页，显示用户信息和电影列表
+- `/movie/edit/<int:movie_id>` - 编辑电影条目页面
+- `/movie/delete/<int:movie_id>` - 删除电影条目
 - `404错误处理` - 自定义404页面
 
 ## 模板文件
 
 - `index.html` - 首页模板，展示用户名称、电影总数和电影列表
+- `edit.html` - 编辑电影条目页面模板
 - `404.html` - 404错误页面模板
 
 ## 配置
@@ -72,6 +77,7 @@ mysql://xun:_Aa7835381@localhost:3306/data
    pip install -r requirements.txt
    ```
 
+
 2. 确保MySQL服务运行并创建数据库 `data`
 
 3. 运行应用：
@@ -85,5 +91,10 @@ mysql://xun:_Aa7835381@localhost:3306/data
 
 ## 静态资源
 
-- CSS样式文件位于 [static/css/style.css](file:///home/xun/MyPyCharm/watchlist/static/css/style.css)
+- CSS样式文件位于 `static/css/style.css`
 - 图片资源位于 `static/images/` 目录下，包括网站图标和装饰图片
+
+## 许权声明
+
+本项目基于采用 MIT 许可证的原项目进行修改学习，遵循相同许可证协议发布。
+原项目声明：This project is licensed under the MIT License.
