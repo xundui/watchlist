@@ -55,21 +55,18 @@
 ## 安装与配置
 
 1. 克隆项目到本地：
-```
-bash
+```bash
 git clone <repository-url>
 cd watchlist
 ```
 2. 创建并激活虚拟环境：
-```
-bash
+```bash
 python -m venv venv
 source venv/bin/activate  # Linux/macOS
 venv\Scripts\activate     # Windows
 ```
 3. 安装依赖：
-```
-bash
+```bash
 pip install -r requirements.txt
 ```
 4. 配置环境变量：
@@ -79,43 +76,37 @@ SECRET_KEY=your-secret-key
 DATABASE_URL=mysql://username:password@host:port/database
 ```
 5. 初始化数据库：
-```
-bash
+```bash
 flask init-db
 ```
 ## 使用说明
 
 1. 启动开发服务器：
-```
-bash
+```bash
 flask run
 ```
 2. 访问应用：
    打开浏览器访问 http://127.0.0.1:5000
 
 3. 创建管理员账户：
-```
-bash
+```bash
 flask admin
 ```
 ## 命令行工具
 
 ### 初始化数据库
-```
-bash
+```bash
 flask init-db [--drop]
 ```
 选项：
 - `--drop`: 删除现有数据后再重新创建
 
 ### 生成测试数据
-```
-bash
+```bash
 flask forge
 ```
 ### 创建/更新管理员账户
-```
-bash
+```bash
 flask admin [--username USERNAME] [--password PASSWORD]
 ```
 选项：
@@ -125,8 +116,7 @@ flask admin [--username USERNAME] [--password PASSWORD]
 ## 测试
 
 运行测试套件：
-```
-bash
+```bash
 python -m unittest
 ```
 测试覆盖了以下功能：
