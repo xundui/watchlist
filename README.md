@@ -97,4 +97,3 @@ mysql://xun:_Aa7835381@localhost:3306/data
 ## 许权声明
 
 本项目基于采用 MIT 许可证的原项目进行修改学习，遵循相同许可证协议发布。
-原项目声明：This project is licensed under the MIT License.
