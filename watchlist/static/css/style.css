@@ -118,15 +118,14 @@ input[name=year] {
     border: 1px solid black;
 }
 
-#提示消息
+/* 提示消息 */
 .alert {
     position: relative;
     padding: 7px;
     margin: 7px 0;
-    border: 1px solid transparent;
     color: #004085;
     background-color: #cce5ff;
-    border-color: #b8daff;
+    border: 1px solid #b8daff;
     border-radius: 5px;
 }
 
