@@ -1,6 +1,6 @@
 import os
 
-MYSQL_PREFIX = 'mysql://xun:_Aa7835381@localhost:3306'
+MYSQL_PREFIX = 'mysql://xundui:_Aa7835381@xundui.mysql.pythonanywhere-services.com:3306'
 
 
 class BaseConfig:  # 创建配置基类
@@ -8,16 +8,16 @@ class BaseConfig:  # 创建配置基类
 
 
 class DevelopmentConfig(BaseConfig):  # 开发配置
-    SQLALCHEMY_DATABASE_URI = MYSQL_PREFIX + '/data'
+    SQLALCHEMY_DATABASE_URI = MYSQL_PREFIX + '/xundui$data'
 
 
 class TestingConfig(BaseConfig):  #测试配置
     TESTING = True
-    SQLALCHEMY_DATABASE_URI = MYSQL_PREFIX + '/test'
+    SQLALCHEMY_DATABASE_URI = MYSQL_PREFIX + '/xundui$default'
 
 
 class ProductionConfig(BaseConfig):  # 生产配置
-    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', MYSQL_PREFIX + '/data')
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', MYSQL_PREFIX + '/xundui$data')
 
 
 config = {
