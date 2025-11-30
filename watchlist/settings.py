@@ -5,12 +5,13 @@ class BaseConfig:  # 创建配置基类
 
 
 class DevelopmentConfig(BaseConfig):  # 开发配置
-    SQLALCHEMY_DATABASE_URI = os.getenv('DEV_DATABASE_URL')
+    SQLALCHEMY_DATABASE_URI = os.getenv('DEV_DATABASE_URL', 'mysql://xun:_Aa7835381@localhost:3306/data')
 
 
-class TestingConfig(BaseConfig):  #测试配置
+class TestingConfig(BaseConfig):
     TESTING = True
-    SQLALCHEMY_DATABASE_URI = os.getenv('TEST_DATABASE_URL')
+    SQLALCHEMY_DATABASE_URI = os.getenv('TEST_DATABASE_URL', 'mysql://xun:_Aa7835381@localhost:3306/data')
+
 
 
 class ProductionConfig(BaseConfig):  # 生产配置
