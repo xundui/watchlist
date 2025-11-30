@@ -56,7 +56,7 @@
 
 1. 克隆项目到本地：
 ```bash
-git clone <repository-url>
+git clone https://github.com/xundui/watchlist.git
 cd watchlist
 ```
 2. 创建并激活虚拟环境：
